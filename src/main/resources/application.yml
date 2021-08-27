@@ -1,0 +1,41 @@
+management:
+  endpoint:
+    health:
+      show-details: when_authorized
+
+## Server Properties
+server:
+  port: 8080
+  servlet:
+    context-path: /ctrlCorridas
+
+spring:
+  banner:
+    location: ./banner.txt
+  application:
+    name: ControleCorredor
+
+  #Java Persistence API
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: 'PUBLIC'
+
+  # H2 DB Configuration
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  # DB Connection Configuration
+  datasource:
+    url: jdbc:h2:mem:ctrlcorredor
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+  sql:
+    init:
+      mode: embedded
