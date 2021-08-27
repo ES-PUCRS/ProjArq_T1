@@ -1,10 +1,11 @@
 # Projeto e Arquitetura de Software (PAS)
-Framework: Springboot 2.5.4  
-Linguagem: Java 11  
-Gerenciador de dependências: Gradle 7.1.1  
+![SpringBoot Version](https://img.shields.io/badge/SpringBoot-2.5.4-blueviolet) ![Gradle Version](https://img.shields.io/badge/Gradle-7.1.1-blue) ![Java Version](https://img.shields.io/badge/Java-11-brightgreen)  
 Package: 'com.pas.ControleCorredor'
     
-    
+# Execução em terminal
+* ./gradlew build
+* ./gradlew bootRun
+
 # Database
 ### Engine
 [H2 Database Engine](https://www.h2database.com/html/main.html)
