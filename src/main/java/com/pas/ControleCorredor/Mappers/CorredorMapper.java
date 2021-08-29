@@ -1,15 +1,17 @@
 package com.pas.ControleCorredor.Mappers;
 
+import java.text.ParseException;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import com.pas.ControleCorredor.DTOs.CorredorDTO;
 import com.pas.ControleCorredor.Entities.CorredorEntity;
-import lombok.AllArgsConstructor;
+
 import org.mapstruct.Mapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
-import java.text.ParseException;
-import java.util.List;
-import java.util.stream.Collectors;
+import lombok.AllArgsConstructor;
 
 @Component
 @AllArgsConstructor
@@ -18,28 +20,21 @@ public class CorredorMapper {
 
     private final ModelMapper modelMapper;
 
-
     public CorredorEntity mapearDTO(CorredorDTO CorredorDTO) throws ParseException {
         return modelMapper.map(CorredorDTO, CorredorEntity.class);
     }
 
-
-    public List<CorredorEntity> mapearDTO(List<CorredorDTO> source) {
-        return source
-                .stream()
-                .map(entity -> modelMapper.map(entity, CorredorEntity.class))
+    public List<CorredorEntity> mapearDTOs(List<CorredorDTO> source) {
+        return source.stream().map(entity -> modelMapper.map(entity, CorredorEntity.class))
                 .collect(Collectors.toList());
     }
-
 
     public CorredorDTO mapear(CorredorEntity Corredor) {
         return modelMapper.map(Corredor, CorredorDTO.class);
     }
+
     public List<CorredorDTO> mapear(List<CorredorEntity> source) {
-        return source
-                .stream()
-                .map(entity -> modelMapper.map(entity, CorredorDTO.class))
-                .collect(Collectors.toList());
+        return source.stream().map(entity -> modelMapper.map(entity, CorredorDTO.class)).collect(Collectors.toList());
     }
 
     public CorredorDTO entityToDTO(CorredorEntity corredor) {
