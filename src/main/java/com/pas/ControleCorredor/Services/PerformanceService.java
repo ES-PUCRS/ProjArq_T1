@@ -32,7 +32,7 @@ public class PerformanceService {
                     .build();
             performances.add(perf);
         }
-        return PerformanceDTO;
+        return performances;
     }
 
 }
