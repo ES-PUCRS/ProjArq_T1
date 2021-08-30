@@ -8,13 +8,13 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class EstatisticaDTO {
-    private int id;
-
     private double media;
 
     private double mediana;
 
-    private double desvPadrao;
+    private double desvioPadrao;
+
+    private double qtdEventos;
 
     private int distancia; 
 }

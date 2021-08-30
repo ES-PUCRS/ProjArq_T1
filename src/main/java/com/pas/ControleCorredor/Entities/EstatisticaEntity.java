@@ -18,7 +18,8 @@ import lombok.Data;
 @Table(name= "Estatistica")
 public class EstatisticaEntity {
     @Id
-    private int id;
+    @Column(name = "DISTANCIA")
+    private double distancia;
 
     @Column(name = "MEDIA")
     private double media;
@@ -26,9 +27,9 @@ public class EstatisticaEntity {
     @Column(name = "MEDIANA")
     private double mediana;
 
-    @Column(name = "DESVPADRAO")
-    private double desvPadrao;
+    @Column(name = "QTD_EVENTOS")
+    private double qtdEventos;
 
-    @Column(name = "DISTANCIA")
-    private double distancia;
+    @Column(name = "DESVIO_PADRAO")
+    private double desvioPadrao;
 }

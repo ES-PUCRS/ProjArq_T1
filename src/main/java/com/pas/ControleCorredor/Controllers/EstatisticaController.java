@@ -1,9 +1,8 @@
 package com.pas.ControleCorredor.Controllers;
 
-import com.pas.ControleCorredor.Services.EventoService;
+import com.pas.ControleCorredor.Services.EstatisticaService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
-import com.pas.ControleCorredor.DTOs.EventoDTO;
 import com.pas.ControleCorredor.DTOs.EstatisticaDTO;
 import lombok.RequiredArgsConstructor;
 
@@ -16,9 +15,12 @@ import static org.springframework.http.HttpStatus.OK;
 @RequiredArgsConstructor
 @RequestMapping("/estatisticas")
 public class EstatisticaController {
-    @GetMapping() 
+    @Resource
+    private EstatisticaService service;
+
+    @GetMapping("/distancia") 
     @CrossOrigin(origins = "*") 
-    public EstatisticaDTO estatisticas(@RequestParam final int distancia){
-        
+    public ResponseEntity<EstatisticaDTO> estatisticas(@RequestParam final int distancia){
+        return new ResponseEntity<>(service.findById(Long.valueOf(distancia)), OK);
     }
 }
