@@ -33,9 +33,18 @@ public class EventoController {
     @PostMapping() // adiciona evento no único corredor
     @CrossOrigin(origins = "*")
     public ResponseEntity<Boolean> informaEvento(@RequestBody final EventoDTO eventoDTO) {
-        EstatisticaEntity estatistica = serviceEstatistica.findById(Long.valueOf(eventoDTO.getDistance()));
+        EstatisticaEntity estatistica = serviceEstatistica.findById(Long.valueOf(eventoDTO.getDistancia()));
         if(estatistica==null){
-            estatistica = new EstatisticaEntity(Long.valueOf(eventoDTO.getDistance()));
+
+            //ToDO: COMPLETE THIS SHIT
+            estatistica = EstatisticaEntity.builder()
+            .setMedia()
+            .setMediana()
+            .setDesvioPadrao()
+            .setDistancia(Long.valueOf(eventoDTO.getDistancia()))
+            .setQtdEventos(1);
+
+
             //todo calcular media mediana, desvio padrao
             
         }else{
