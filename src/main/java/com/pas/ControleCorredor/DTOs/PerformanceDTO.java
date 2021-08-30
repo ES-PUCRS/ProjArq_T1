@@ -9,8 +9,11 @@ import lombok.*;
 @NoArgsConstructor
 public class PerformanceDTO {
 
-    private double desvioPadrao;
-    private double qtdEventos;
     private int distancia;
+    private int ano;
+    // Tempo que o corredor levou para percorrer a distancia
+    private int horas;
+    private int minutos;
+    private int segundos;
 
 }

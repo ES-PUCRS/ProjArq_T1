@@ -37,11 +37,11 @@ public class EventoService {
         int tempo = (eventoDTO.getHoras() * 3600) + (eventoDTO.getMinutos() * 60) + eventoDTO.getSegundos();
         eventoDTO.setMediaTempo(tempo);
 
-        if(estatisticaDTO == null){
+        if(estatisticaDTO == null) {
              estatisticaDTO = EstatisticaDTO.builder()
                 .media(tempo)
                 .mediana(tempo)
-                .desvioPadrao(1)
+                .desvioPadrao(0)
                 .distancia(eventoDTO.getDistancia())
                 .qtdEventos(1)
                 .build();
@@ -59,6 +59,7 @@ public class EventoService {
 
             estatisticaDTO.setMediana(mediana);
             estatisticaDTO.setQtdEventos(qtde);
+            estatisticaDTO.setDesvioPadrao(0);
             estatisticaDTO.setMedia(media);
         }
 

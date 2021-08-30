@@ -11,4 +11,10 @@ public class Queries {
         +" ) AS query "
         +" WHERE rownumber = :mediana";
 
+    public static final String performance =
+        " SELECT "
+        +   " * "
+        +   " FROM EVENTOS "
+        + " WHERE ano = :ano "
+        + " AND   distancia = :distancia";
 }

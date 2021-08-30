@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
+import java.util.List;
+
 import static org.springframework.http.HttpStatus.OK;
 
 @RestController
@@ -19,8 +21,8 @@ public class PerformanceController {
 
     @GetMapping("/aumentoPerformance")
     @CrossOrigin(origins = "*")
-    public ResponseEntity<PerformanceDTO> aumentoPerformance (@RequestParam final int distancia,
-                                                              @RequestParam final int ano ){
+    public ResponseEntity<List<PerformanceDTO>> aumentoPerformance (@RequestParam final int distancia,
+                                                                    @RequestParam final int ano ){
         return new ResponseEntity<>(service.findPerformance(distancia, ano), OK);
     }
 
