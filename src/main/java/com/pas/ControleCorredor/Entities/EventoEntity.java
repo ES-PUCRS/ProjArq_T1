@@ -46,6 +46,8 @@ public class EventoEntity {
     @Column(name = "segundos")
     private int segundos;
 
+    @Column(name = "MEDIA_TEMPO")
+    private int mediaTempo;
 
     @Override
     public String toString() {

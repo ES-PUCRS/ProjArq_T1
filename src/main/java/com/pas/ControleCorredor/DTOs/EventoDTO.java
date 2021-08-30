@@ -2,9 +2,6 @@ package com.pas.ControleCorredor.DTOs;
 
 import lombok.*;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
-
 @Getter
 @Setter
 @Builder
@@ -27,5 +24,7 @@ public class EventoDTO {
     private int horas;
     private int minutos;
     private int segundos;
+
+    private int mediaTempo;
 
 }

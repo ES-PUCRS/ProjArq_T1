@@ -22,6 +22,7 @@ CREATE TABLE IF NOT EXISTS EVENTOS (
     HORAS int,
     MINUTOS int,
     SEGUNDOS int,
+    MEDIA_TEMPO int,
 
     PRIMARY KEY(id)
 );
