@@ -1,4 +1,4 @@
-package com.pas.ControleCorredor.aplicacao.Services;
+package com.pas.ControleCorredor.negocio.Services;
 
 import com.pas.ControleCorredor.aplicacao.DTOs.PerformanceDTO;
 import com.pas.ControleCorredor.negocio.Entities.EventoEntity;

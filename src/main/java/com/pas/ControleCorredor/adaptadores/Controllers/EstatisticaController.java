@@ -1,6 +1,6 @@
 package com.pas.ControleCorredor.adaptadores.Controllers;
 
-import com.pas.ControleCorredor.aplicacao.Services.EstatisticaService;
+import com.pas.ControleCorredor.negocio.Services.EstatisticaService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.http.ResponseEntity;
 import com.pas.ControleCorredor.aplicacao.DTOs.EstatisticaDTO;

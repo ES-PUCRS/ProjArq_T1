@@ -3,7 +3,7 @@ package com.pas.ControleCorredor.adaptadores.Controllers;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import com.pas.ControleCorredor.aplicacao.Services.CorredorService;
+import com.pas.ControleCorredor.negocio.Services.CorredorService;
 import com.pas.ControleCorredor.aplicacao.DTOs.CorredorDTO;
 import org.springframework.http.ResponseEntity;
 

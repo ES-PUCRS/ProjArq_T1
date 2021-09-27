@@ -1,7 +1,7 @@
 package com.pas.ControleCorredor.adaptadores.Controllers;
 
 import com.pas.ControleCorredor.aplicacao.DTOs.PerformanceDTO;
-import com.pas.ControleCorredor.aplicacao.Services.PerformanceService;
+import com.pas.ControleCorredor.negocio.Services.PerformanceService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
